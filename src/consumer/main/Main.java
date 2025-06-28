@@ -17,8 +17,11 @@ public class Main {
         // 1º Versão via classe que estende um consumer.
         // produtoList.forEach(new PriceUpdate());
 
-        // 2º Versão via funções estáticas da classe Produto
-        produtoList.forEach(Produto::staticPriceUpdate);
+        // 2º Versão via funçõe estática da classe Produto
+        // produtoList.forEach(Produto::staticPriceUpdate);
+
+        // 3º Versão, via função na classe Produto.
+        produtoList.forEach(Produto::nonStaticPriceUpdate);
         produtoList.forEach(System.out::println);
 
     }

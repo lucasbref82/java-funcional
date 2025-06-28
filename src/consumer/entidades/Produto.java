@@ -32,9 +32,15 @@ public class Produto {
     public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
+
     public static void staticPriceUpdate(Produto produto) {
         produto.setValor(produto.getValor().multiply(new BigDecimal("1.1")));
     }
+
+    public void nonStaticPriceUpdate() {
+        setValor(getValor().multiply(new BigDecimal("1.1")));
+    }
+
 
     @Override
     public String toString() {
