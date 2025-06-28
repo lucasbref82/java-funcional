@@ -6,6 +6,7 @@ import consumer.entidades.Produto;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +22,14 @@ public class Main {
         // produtoList.forEach(Produto::staticPriceUpdate);
 
         // 3º Versão, via função na classe Produto.
-        produtoList.forEach(Produto::nonStaticPriceUpdate);
+        // produtoList.forEach(Produto::nonStaticPriceUpdate);
+
+        // 4º Via expressão lambda declarada.
+        // Consumer<Produto> consumer = p -> p.setValor(p.getValor().multiply(new BigDecimal("1.1")));
+
+        // 5º Via expresso INLINE
+        produtoList.forEach(p -> p.setValor(p.getValor().multiply(new BigDecimal("1.1"))));
+
         produtoList.forEach(System.out::println);
 
     }
