@@ -1,12 +1,10 @@
 package consumer.main;
 
-import consumer.util.PriceUpdate;
 import consumer.entidades.Produto;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
