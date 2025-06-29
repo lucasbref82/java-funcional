@@ -13,6 +13,7 @@ public class Main {
         produtoList.add(new Produto("TV", BigDecimal.valueOf(900.00)));
         produtoList.add(new Produto("Notebook", BigDecimal.valueOf(1200.00)));
         produtoList.add(new Produto("Tablet", BigDecimal.valueOf(450.00)));
+
         // 1º Versão via classe que estende um consumer.
         // produtoList.forEach(new PriceUpdate());
 
