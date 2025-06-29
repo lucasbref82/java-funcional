@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 
 public class FuncionarioService {
 
-    public void filtraESomaSalarios(List<Funcionario> funcionarios, Predicate<Funcionario> predicate) {
+    public void filtraESomaSalarios(List<Funcionario> funcionarios, Predicate<Funcionario   > predicate) {
         BigDecimal somaSalarios = funcionarios
                 .stream()
                 .filter(predicate)
@@ -20,10 +20,13 @@ public class FuncionarioService {
 
     public void printaEmailsFiltrados(List<Funcionario> funcionarios, BigDecimal valorSalario) {
         System.out.println("Email das pessoas que recebem mais que: " + valorSalario);
-        funcionarios
+
+        List<String> emails = funcionarios
                 .stream()
                 .filter(x -> x.getSalario().compareTo(valorSalario) > 0)
                 .map(Funcionario::getEmail)
-                .forEach(System.out::println);
+                .toList();
+
+        emails.forEach(System.out::println);
     }
 }
