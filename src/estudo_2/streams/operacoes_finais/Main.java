@@ -56,7 +56,25 @@ public class Main {
         System.out.println(novoMapa);
 
 
+        System.out.println("---------------------------------------------");
+
+        String colectString = lista.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining());
+
+        System.out.println(colectString);
 
 
+        System.out.println("---------------------------------------------");
+
+        String collectStringJoining = lista.stream()
+                .map(String::valueOf)
+                .collect(Collectors.joining(";"));
+
+        System.out.println(collectStringJoining);
+
+        // Stream (Loop's implicito) *** Código mais verboso mais difícil de enteder.
+
+        // for - while - do while ... (Loops explicitos) *** Controlado pelo usuário, mais díficil de entender.
     }
 }
