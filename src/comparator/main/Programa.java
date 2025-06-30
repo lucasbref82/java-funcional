@@ -22,7 +22,6 @@ public class Programa {
         Comparator<Produto> compV1 = (p1, p2) -> {
             return p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
         };
-
         // Versão 2
         // Passando a expressão Lambda direto, sem o abre e fecha chaves, ideal para quando precisamos passar somente um parametro.
         Comparator<Produto> compV2 = (p1, p2) -> p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase());
