@@ -40,7 +40,7 @@ public class Main {
         double menorValor = DoubleStream.of(1.5, 1,7, 6,7)
                 .reduce(Double.POSITIVE_INFINITY, Math::min);
 
-        // Usando combine
+        // Usando combine (Combine so e chamado quando usamos stream paralela
 
         // Primeiro caso, sem combine.
         String combineUm = list.stream().map(String::valueOf).reduce("", String::concat);
@@ -49,6 +49,7 @@ public class Main {
         // Segundo caso, com combine
         String combine2 = list.stream().reduce("", (x, y) -> x.concat(y.toString()), String::concat);
         System.out.println(combine2);
+
 
 
 
